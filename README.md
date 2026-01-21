@@ -2,11 +2,19 @@
 基于 Qwen2.5-0.5B-Instruct 模型，对自定义的 JSONL 格式情绪识别数据集进行全量指令微调，输出JSON格式的多类情绪识别结果。同时，训练时使用回调实时记录训练和验证损失并保存Loss曲线图。
 
 ## 环境核心配置
+```bash
 python==3.10.19
 torch==2.9.1
 transformers==4.57.6
 peft==0.18.1
 accelerate==1.12.0
+```
+
+## Qwen模型下载
+在终端输入以下命令，如没有modelscope，请先执行pip install modelscope。
+```bash
+modelscope download --model Qwen/Qwen2.5-0.5B-Instruct
+```
 
 ## JSONL输入数据示例
 ```bash
